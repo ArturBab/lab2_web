@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}PCSHOP - Материнские платы{% endblock %}
+
+    <a href ="/">Вернуться на главную</a>
+
+
+{% block content %}
+
+    <div>
+    На данный момент, у нас в продаже доступны эти материнские платы для ПК:
+
+    {% for el in pla %}
+        <div class="alert alert-warning">
+        <h3>{{ el.name }}</h3>
+                <h4>{{ el.price }} руб.</h4>
+                        <h4>{{ el.description }}</h4>
+        </div>
+    {% endfor %}
+
+    </div>
+
+    <a href ="/">Назад</a>
+{% endblock %}

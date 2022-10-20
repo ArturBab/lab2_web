@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}PCSHOP - Процессоры{% endblock %}
+
+{% block content %}
+
+    <div>
+    На данный момент, у нас в продаже доступны эти процессоры:
+
+    {% for el in pro %}
+        <div class="alert alert-warning">
+        <h3>{{ el.name }}</h3>
+                <h4>{{ el.price }} руб.</h4>
+                        <h4>{{ el.description }}</h4>
+        </div>
+    {% endfor %}
+
+    </div>
+
+
+    <a href ="/">Назад</a>
+{% endblock %}
